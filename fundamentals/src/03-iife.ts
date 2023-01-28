@@ -1,7 +1,7 @@
 /*
   understanding Immediately Invoked Function Expression IIFE for short
   also known as Self-Executing Anonymous Function (Funcion anonima auto-ejecutada)
-  This is useful to use variable names in different ts files
+  This is useful to give the code inside a unique scope
   */
 (()=> {
   let productName = 'Product 1'; // inferred type: string
