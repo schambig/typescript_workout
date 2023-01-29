@@ -12,5 +12,5 @@
     console.log('random', random);
     isNew = random >= 0.5 ? true : false; // ternary, we also can use 'random>=0.5'
     console.log('isNew', isNew);
-    const myBoolean = true;
+    const myBoolean = true; // Boolean =/= boolean
 })();
