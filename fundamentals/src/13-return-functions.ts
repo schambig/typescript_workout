@@ -1,11 +1,13 @@
 (()=>{
   // use Type Annotation for parameter and return value, do not infer
   const calcTotal = (prices: number[]): string => {
-    let total = 0;
+    let total = 0; // inferred value: number
     prices.forEach((item)=> {
       total += item;
     });
-    return total.toString(); // use toString() method because 'total' is number value
+    // use toString() method because 'total' is number value and we said earlier
+    // that this function will return a string
+    return total.toString();
   }
 
   // use Type Annotation (: void) for the return of the function
