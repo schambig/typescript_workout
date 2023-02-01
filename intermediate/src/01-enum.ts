@@ -26,3 +26,8 @@ const saloUser: User = { // we have to define username and role
   // this is the way to assing a value to role, first call the enum then one of its options
   role: ROLES.SELLER
 }
+
+export {
+  ROLES,
+  User
+}
