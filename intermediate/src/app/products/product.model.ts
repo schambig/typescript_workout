@@ -21,7 +21,12 @@ interface Product extends BaseModel {
   tags: string[]; // added for CRUD
 }
 
+// type CreateProductDto = Omit<Product, 'id' | 'createdAt' | 'updatedAt' | 'category'>;
+// it is better to create a nwe interface and extend it omitting the properties and adding a new property
+// we cretaed it and moved to its own file: product.dto.ts
+
 export {
   Sizes,
-  Product
+  Product,
+  // CreateProductDto moved to product.dto.ts beacuse good practices
 }
