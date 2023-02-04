@@ -1,1 +1,5 @@
-Learning TypeScript Language
+# Learning TypeScript
+
+## Fundamentals
+## Intermediate
+## Advanced OOP and Asynchronism 
