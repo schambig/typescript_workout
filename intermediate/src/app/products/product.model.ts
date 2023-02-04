@@ -7,12 +7,18 @@ interface Product extends BaseModel {
   // id: string | number; add this property through an extend using BaseModel
   // createdAt: Date; add this property through an extend using BaseModel
   title: string;
+  image: string; // added for CRUD
+  description: string; // added for CRUD
   stock: number;
+  color: string; // added for CRUD
+  price: number; // added for CRUD
   size?: Sizes;
   // category: { // add this new property (suboject) and update main.ts
   //   id: string | number;
   //   name: string;
   category: Category;
+  isNew: boolean; // added for CRUD
+  tags: string[]; // added for CRUD
 }
 
 export {
