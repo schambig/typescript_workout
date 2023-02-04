@@ -1,11 +1,24 @@
+import{ faker } from '@faker-js/faker'
 import { Product } from './product.model';
+import { CreateProductDto } from './product.dto'
 
 const products: Product[] = [];
 
-const addProduct = (data: Product) => {
-  // data.id = 'new id'; use of readonly keyword prevent a variable to be overwritten
-  // data.createdAt = new Date(1998, 1, 1); use of readonly keyword prevent a variable to be overwritten
-  products.push(data);
+const addProduct = (data: CreateProductDto): Product => {
+  const newProduct = {
+    ...data,
+    id: faker.datatype.uuid(),
+    createdAt: faker.date.recent(),
+    updatedAt: faker.date.recent(),
+    category: {
+      id: data.categoryId,
+      name: faker.commerce.department(),
+      createdAt: faker.date.recent(),
+      updatedAt: faker.date.recent(),
+    }
+  }
+  products.push(newProduct);
+  return newProduct;
 }
 
 const updateProduct = (id: string, changes: Product) => {
