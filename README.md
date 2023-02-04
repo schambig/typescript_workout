@@ -2,4 +2,4 @@
 
 ## Fundamentals
 ## Intermediate
-## Advanced OOP and Asynchronism 
+## OOP and Asynchronism 
