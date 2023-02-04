@@ -8,7 +8,22 @@ const addProduct = (data: Product) => {
   products.push(data);
 }
 
+const updateProduct = (id: string, changes: Product) => {
+  // code
+}
+
+const getProduct = (id: string) => {
+  // code
+}
+
+const deleteProduct = (id: string) => {
+  // code
+}
+
 export {
   products,
-  addProduct
+  addProduct,
+  updateProduct,
+  getProduct,
+  deleteProduct,
 }
