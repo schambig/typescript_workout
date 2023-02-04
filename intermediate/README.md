@@ -1,1 +1,1 @@
-TypeScript Advanced Types and Functions
+Advanced Types and Functions
