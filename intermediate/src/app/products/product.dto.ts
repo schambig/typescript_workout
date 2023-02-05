@@ -15,7 +15,13 @@ interface UpdateProductDto extends Partial<CreateProductDto> {};
 // this utility type make all properties mandatory (obligatorias)
 type example2 = Required<Product>;
 
+// Readonly Utility Type sets all properties to readonly type
+// because we do not need to change the values when we are looking for a specific product
+// we need to apply this utility type on the Partial<Product>
+interface FindProductDto extends Readonly<Partial<Product>> {};
+
 export {
   CreateProductDto,
-  UpdateProductDto
+  UpdateProductDto,
+  FindProductDto
 }
