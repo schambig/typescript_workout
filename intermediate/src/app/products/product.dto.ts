@@ -18,7 +18,9 @@ type example2 = Required<Product>;
 // Readonly Utility Type sets all properties to readonly type
 // because we do not need to change the values when we are looking for a specific product
 // we need to apply this utility type on the Partial<Product>
-interface FindProductDto extends Readonly<Partial<Product>> {};
+interface FindProductDto extends Readonly<Partial<Omit<Product, 'tags'>>> {
+  readonly tags: ReadonlyArray<string>;
+};
 
 export {
   CreateProductDto,
