@@ -37,6 +37,9 @@ const findProduct = (dto: FindProductDto): Product[] => {
   // code to make the lookup of the products from the database
   // dto.color = 'blue'; this overwrite can not be done because we are using\
   // dto.isNew = 'true'; FindProductDto which is Readonly<Partial<Product>> utility type
+  // dto.tags = []; we cant overwrite because this propety es of type readonly
+  // dto.tags?.pop(); we can't use mutation methods on this array due to\
+  // dto.tags?.push(); ReadonlyArray<> utility type, see product.dto.ts
   return products;
 }
 
