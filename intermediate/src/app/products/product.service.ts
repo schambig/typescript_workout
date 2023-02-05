@@ -1,6 +1,6 @@
 import{ faker } from '@faker-js/faker'
 import { Product } from './product.model';
-import { CreateProductDto, UpdateProductDto } from './product.dto'
+import { CreateProductDto, UpdateProductDto, FindProductDto } from './product.dto'
 
 const products: Product[] = [];
 
@@ -31,8 +31,11 @@ const updateProduct = (id: string, changes: UpdateProductDto): Product => {
   return products[index];
 }
 
-const getProduct = (id: string) => {
-  // code
+const findProduct = (dto: FindProductDto): Product[] => {
+  // code to make the lookup of the products from the database
+  // dto.color = 'blue'; this overwrite can not be done because we are using\
+  // dto.isNew = 'true'; FindProductDto which is Readonly<Partial<Product>> utility type
+  return products;
 }
 
 const deleteProduct = (id: string) => {
@@ -43,6 +46,6 @@ export {
   products,
   addProduct,
   updateProduct,
-  getProduct,
+  findProduct,
   deleteProduct,
 }
