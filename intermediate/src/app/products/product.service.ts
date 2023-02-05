@@ -21,7 +21,9 @@ const addProduct = (data: CreateProductDto): Product => {
   return newProduct;
 }
 
-const updateProduct = (id: string, changes: UpdateProductDto): Product => {
+
+// get the value type automatically through the index using: Product['id']
+const updateProduct = (id: Product['id'], changes: UpdateProductDto): Product => {
   const index = products.findIndex(item => item.id === id);
   const prevData = products[index];
   products[index] = {
