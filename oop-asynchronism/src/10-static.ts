@@ -6,7 +6,7 @@ class MyMath {
   static readonly PI = 3.14;
 
   static max(...numbers: number[]) { // use spread operator to recieve an array of unlimited numbers
-    return numbers.reduce((max, item) => max >= item ? max: item, 0);
+    return numbers.reduce((max, item) => max >= item ? max: item); // do not initialize in 0
   }
 }
 
