@@ -4,14 +4,16 @@ import { Product } from '../models/product.model';
 import { CreateProductDto, UpdateProductDto } from '../dtos/product.dto';
 // import { ProductService } from '../models/product-service.model'; commit this change in next push
 
-// create a class based on previous functions, ('implements ProductService' comes in next commit an error is shown by now)
-export class ProductMemoryService implements ProductService {
+// the line below will be implemented in next commit replacing line 12
+// export class ProductMemoryService implements ProductService {
+
+// create a class based on previous functions.
+export class ProductMemoryService {
   private products: Product[] = [];
 
-  // commit this change in next push
-  // getAll() {
-  //   return this.products;
-  // }
+  getAll() {
+    return this.products;
+  }
 
   create(data: CreateProductDto): Product {
     const newProduct = {
