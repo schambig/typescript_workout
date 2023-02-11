@@ -2,13 +2,10 @@ import { faker } from '@faker-js/faker';
 
 import { Product } from '../models/product.model';
 import { CreateProductDto, UpdateProductDto } from '../dtos/product.dto';
-// import { ProductService } from '../models/product-service.model'; commit this change in next push
-
-// the line below will be implemented in next commit replacing line 12
-// export class ProductMemoryService implements ProductService {
+import { ProductService } from '../models/product-service.model';
 
 // create a class based on previous functions.
-export class ProductMemoryService {
+export class ProductMemoryService implements ProductService {
   private products: Product[] = [];
 
   getAll() {
