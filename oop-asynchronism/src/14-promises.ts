@@ -12,12 +12,16 @@ import axios from 'axios';
   }
 
   // now we will use promises with axios
+  // (local function) getProducts(): Promise<AxiosResponse<any, any>> (vscode info)
+  // notice that this function returns a promise
   function getProducts() {
     const promise = axios.get('https://api.escuelajs.co/api/v1/products');
     return promise;
   }
 
   // create a new function using async to execute await within the function
+  // (local function) getProductsAsync(): Promise<any> (vscode info)
+  // notice that this function returns a promise
   async function getProductsAsync() {
     const rta = await axios.get('https://api.escuelajs.co/api/v1/products');
     return rta.data;
