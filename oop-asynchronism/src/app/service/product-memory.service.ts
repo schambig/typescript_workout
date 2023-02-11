@@ -4,7 +4,7 @@ import { Product } from '../models/product.model';
 import { CreateProductDto, UpdateProductDto } from '../dtos/product.dto';
 // import { ProductService } from '../models/product-service.model'; commit this change in next push
 
-// this is a new function
+// create a class based on previous functions, ('implements ProductService' comes in next commit an error is shown by now)
 export class ProductMemoryService implements ProductService {
   private products: Product[] = [];
 
