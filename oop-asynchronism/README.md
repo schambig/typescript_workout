@@ -1,1 +1,3 @@
-Object Oriented Programing and Asynchronism
+# Learning TypeScript
+
+## Object Oriented Programing and Asynchronism
