@@ -1,1 +1,3 @@
-Advanced Types and Functions
+# Learning TypeScript
+
+## Advanced Types and Functions
