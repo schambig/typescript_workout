@@ -1,5 +1,3 @@
-# Learning TypeScript
-
 ## Fundamentals
 
 * Primitive datatypes
